@@ -45,8 +45,6 @@ The application will be available at http://localhost:3000.
 
 ## Usage
 
-## Usage
-
 1. Open the application in your browser.
 2. Use the buttons to interact with the counter:
    - **Increment**: Increase the counter value.
