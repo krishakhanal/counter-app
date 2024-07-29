@@ -1,38 +1,111 @@
+
+
+/* Basic reset and styling for full-height body and centered content */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background: #7597d0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e5e1e1;
+}
+
+/* Center align text within the App container */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Style for the header section of the App */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: rgba(255, 255, 255, 0.15); /* Semi-transparent white background */
+  padding: 2em; /* Padding around the content */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  backdrop-filter: blur(10px); /* Blur effect on the background */
+  -webkit-backdrop-filter: blur(10px); /* Safari-specific blur effect */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for hover effects */
+  max-width: 90%; /* Responsive width constraint */
+  width: 500px; /* Fixed width */
 }
 
-.App-link {
-  color: #61dafb;
+/* Hover effect for the header */
+.App-header:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
 }
 
-@keyframes App-logo-spin {
+/* Style for headings */
+h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Style for paragraphs */
+p {
+  font-size: 4em;
+  margin: 0.5em 0;
+}
+
+/* Style for buttons */
+button {
+  margin: 0.5em;
+  padding: 0.7em 1.5em;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  background-color: #4164a1; 
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for buttons */
+button:hover {
+  background-color: #313a4b; /* Darker background on hover */
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Active state for buttons */
+button:active {
+  transform: scale(1); /* Reset button size when clicked */
+}
+
+/* Remove outline from focused button */
+button:focus {
+  outline: none;
+}
+
+/* Animation for fading in elements */
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+/* Apply fade-in animation to all child elements of the header */
+.App-header > * {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive design adjustments for smaller screens */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em; /* Smaller font size for headings */
+  }
+
+  p {
+    font-size: 3em; /* Smaller font size for paragraphs */
+  }
+
+  button {
+    font-size: 1em; /* Smaller font size for buttons */
+    padding: 0.5em 1em; /* Adjust padding for smaller buttons */
   }
 }
