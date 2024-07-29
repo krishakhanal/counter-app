@@ -45,6 +45,14 @@ The application will be available at http://localhost:3000.
 
 ## Usage
 
+## Usage
+
+1. Open the application in your browser.
+2. Use the buttons to interact with the counter:
+   - **Increment**: Increase the counter value.
+   - **Decrement**: Decrease the counter value.
+   - **Reset**: Set the counter value back to 0.
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
